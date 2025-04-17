@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@font-face {
+    src: url("../assets/inter.ttf") format("truetype");
+    font-family: Inter;
+    font-display: swap;
+}
+
+@layer base {
+  body {
+    @apply dark:bg-zinc-950;
+  }
+  * {
+    @apply leading-none;
+    font-family: Inter
+  }
+  html {
+    @apply text-[10px];
+  }
+}
+
+@utility container-width {
+  @apply max-w-[80%] mx-auto;
+}
